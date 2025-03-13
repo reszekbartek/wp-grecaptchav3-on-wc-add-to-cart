@@ -20,7 +20,7 @@ function grev3atc_settings_init() {
 		'grev3atc_settings_section',
 		array(
 			'label_for'         => 'grev3atc_sitekey',
-			'class'             => 'wporg_row',
+			'class'             => 'regular-text',
 		)
 	);
 
@@ -33,7 +33,7 @@ function grev3atc_settings_init() {
 		'grev3atc_settings_section',
         array(
 			'label_for'         => 'grev3atc_secretkey',
-			'class'             => 'wporg_row',
+			'class'             => 'regular-text',
 		)
 	);
 }
