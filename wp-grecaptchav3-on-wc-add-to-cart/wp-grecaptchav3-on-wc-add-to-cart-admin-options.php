@@ -46,7 +46,7 @@ function grev3atc_secretkey_field_callback($args) {
 	$options = get_option('grev3atc_keys');
 
 	?>
-	<input id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
+	<input class="<?php echo esc_attr( $args['class'] ); ?>" id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
     <p class="description">
 		<?php esc_html_e( 'Wpisz swój secretKey', 'grev3atc' ); ?>
 	</p>
@@ -59,7 +59,7 @@ function grev3atc_sitekey_field_callback($args) {
 	$options = get_option('grev3atc_keys');
 
 	?>
-	<input id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
+	<input class="<?php echo esc_attr( $args['class'] ); ?>" id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
     <p class="description">
 		<?php esc_html_e( 'Wpisz swój siteKey', 'grev3atc' ); ?>
 	</p>
