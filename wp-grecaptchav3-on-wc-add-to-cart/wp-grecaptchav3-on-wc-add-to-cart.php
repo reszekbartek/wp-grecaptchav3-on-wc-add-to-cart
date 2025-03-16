@@ -9,6 +9,12 @@
  * Text Domain: grev3atc
  */
 
+
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), function($settings) {
+		$settings[] = '<a href="'. admin_url( 'admin.php?page=grev3atc' ) .'">'.__('Settings').'</a>';
+		return $settings;
+	});
+
 require_once( plugin_dir_path( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart-admin-options.php');
 
 function woocommerce_add_to_cart_recaptcha_load_scripts(){
@@ -84,13 +90,6 @@ function woocommerce_add_to_cart_recaptcha_validation( $passed, $product_id, $qu
 }
 
 add_filter( 'woocommerce_add_to_cart_validation', 'woocommerce_add_to_cart_recaptcha_validation', 9, 3 );
-
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'grev3atc_plugin_settings' );
-
-function grev3atc_plugin_settings( $settings ) {
-   $settings[] = '<a href="'. admin_url( 'admin.php?page=grev3atc' ) .'">Config</a>';
-   return $settings;
-}
 
 //TO DO LIST:
 
