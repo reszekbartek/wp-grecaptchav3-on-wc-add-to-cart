@@ -76,7 +76,7 @@ function grev3atc_section_callback( $args ) {
 function grev3atc_options_page() {
 	add_menu_page(
 		'Woocommerce Google recaptcha v3 on Add to cart Options',
-		'WC-gre-atc',
+		'WC-grev3-atc',
 		'manage_options',
 		'grev3atc',
 		'grev3atc_options_page_html'
