@@ -48,7 +48,7 @@ function grev3atc_secretkey_field_callback($args) {
 	?>
 	<input class="<?php echo esc_attr( $args['class'] ); ?>" id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
     <p class="description">
-		<?php esc_html_e( 'Wpisz swój secretKey', 'grev3atc' ); ?>
+		<?php esc_html_e( 'Enter your secretKey', 'grev3atc' ); ?>
 	</p>
     <?php
 }
@@ -61,14 +61,14 @@ function grev3atc_sitekey_field_callback($args) {
 	?>
 	<input class="<?php echo esc_attr( $args['class'] ); ?>" id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
     <p class="description">
-		<?php esc_html_e( 'Wpisz swój siteKey', 'grev3atc' ); ?>
+		<?php esc_html_e( 'Enter your siteKey', 'grev3atc' ); ?>
 	</p>
     <?php
 }
 
 function grev3atc_section_callback( $args ) {
 	?>
-	<p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Wpisz wartosci z ustawień panelu google reCaptcha.', 'grev3atc' ); ?></p>
+	<p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Enter the values from the Google reCaptcha panel settings.', 'grev3atc' ); ?></p>
 	<?php
 }
 
@@ -96,7 +96,7 @@ function grev3atc_options_page_html() {
 	}
 
 	if ( isset( $_GET['settings-updated'] ) ) {
-		add_settings_error( 'grev3atc_messages', 'grev3atc_message', __( 'Settings Saved', 'grev3atc' ), 'updated' );
+		add_settings_error( 'grev3atc_messages', 'grev3atc_message', __( 'Settings Saved'), 'updated' );
 	}
 
 	settings_errors( 'grev3atc_messages' );

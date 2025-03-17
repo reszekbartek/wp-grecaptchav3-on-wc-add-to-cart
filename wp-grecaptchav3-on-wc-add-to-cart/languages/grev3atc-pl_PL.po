@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: reCaptcha Google v3 on Add to cart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-16 19:32+0000\n"
+"PO-Revision-Date: 2025-03-16 19:43+0000\n"
+"Last-Translator: Sprawdzacz\n"
+"Language-Team: Polski\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10 >= 2 && n%10<=4 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: grev3atc"
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:71
+msgid "Enter the values from the Google reCaptcha panel settings."
+msgstr ""
+"Wpisz wartości z swojego panelu ustawień Google reCaptcha v3 dla strony."
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:51
+msgid "Enter your secretKey"
+msgstr "Wpisz swój secretKey"
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:64
+msgid "Enter your siteKey"
+msgstr "Wpisz swój siteKey"
+
+#: wp-grecaptchav3-on-wc-add-to-cart.php:67
+msgid "Error captcha (empty token)."
+msgstr "Błąd captcha (pusty token)."
+
+#: wp-grecaptchav3-on-wc-add-to-cart.php:89
+msgid "Error captcha (spam suspicion)."
+msgstr "Błąd cpatcha (podejrzenie robota)."
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:30
+msgid "Google SecretKey"
+msgstr "Google SecretKey"
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:17
+msgid "Google SiteKey"
+msgstr "Google SiteKey"
+
+#. Author URI of the plugin
+msgid "https://github.com/reszekbartek"
+msgstr "https://github.com/reszekbartek"
+
+#. Description of the plugin
+msgid "Plugin dodający google recaptcha v3 dla dodawania produktu do koszyka"
+msgstr "Plugin dodający google recaptcha v3 dla dodawania produktu do koszyka"
+
+#. Name of the plugin
+msgid "reCaptcha Google v3 on Add to cart"
+msgstr "reCaptcha Google v3 on Add to cart"
+
+#. Author of the plugin
+msgid "Reszek"
+msgstr "Reszek"
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:10
+msgid "Your google recaptcha v3 for \"Add to cart\" - settings"
+msgstr "Ustawienia pluginu \"reCaptcha Google v3 on Add to cart\""

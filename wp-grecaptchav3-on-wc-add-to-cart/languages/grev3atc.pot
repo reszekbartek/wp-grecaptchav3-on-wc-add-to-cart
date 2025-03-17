@@ -1,0 +1,65 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: reCaptcha Google v3 on Add to cart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-16 19:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: grev3atc"
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:71
+msgid "Enter the values from the Google reCaptcha panel settings."
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:51
+msgid "Enter your secretKey"
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:64
+msgid "Enter your siteKey"
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart.php:67
+msgid "Error captcha (empty token)."
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart.php:89
+msgid "Error captcha (spam suspicion)."
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:30
+msgid "Google SecretKey"
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:17
+msgid "Google SiteKey"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/reszekbartek"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin dodający google recaptcha v3 dla dodawania produktu do koszyka"
+msgstr ""
+
+#. Name of the plugin
+msgid "reCaptcha Google v3 on Add to cart"
+msgstr ""
+
+#. Author of the plugin
+msgid "Reszek"
+msgstr ""
+
+#: wp-grecaptchav3-on-wc-add-to-cart-admin-options.php:10
+msgid "Your google recaptcha v3 for \"Add to cart\" - settings"
+msgstr ""

@@ -7,8 +7,13 @@
  * Author: Reszek
  * Author URI: https://github.com/reszekbartek
  * Text Domain: grev3atc
+ * Domain Path: /languages
  */
 
+
+add_action( 'init', function() {
+		load_plugin_textdomain( 'grev3atc', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+	});
 
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), function($settings) {
 		$settings[] = '<a href="'. admin_url( 'admin.php?page=grev3atc' ) .'">'.__('Settings').'</a>';
