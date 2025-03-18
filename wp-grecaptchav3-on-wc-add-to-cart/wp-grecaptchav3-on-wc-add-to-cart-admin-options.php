@@ -15,12 +15,13 @@ function grev3atc_settings_init() {
 	add_settings_field(
 		'grev3atc_sitekey',
 		__( 'Google SiteKey', 'grev3atc' ),
-		'grev3atc_sitekey_field_callback',
+		'grev3atc_simple_text_field_callback',
 		'grev3atc',
 		'grev3atc_settings_section',
 		array(
 			'label_for'         => 'grev3atc_sitekey',
 			'class'             => 'regular-text',
+			'description'		=> __( 'Enter your siteKey', 'grev3atc' ),
 		)
 	);
 
@@ -28,12 +29,13 @@ function grev3atc_settings_init() {
 	add_settings_field(
 		'grev3atc_secretkey',
 		__( 'Google SecretKey', 'grev3atc' ), 
-        'grev3atc_secretkey_field_callback',
+        'grev3atc_simple_text_field_callback',
 		'grev3atc',
 		'grev3atc_settings_section',
         array(
 			'label_for'         => 'grev3atc_secretkey',
 			'class'             => 'regular-text',
+			'description'		=> __( 'Enter your secretKey', 'grev3atc' ),
 		)
 	);
 }
@@ -41,27 +43,14 @@ function grev3atc_settings_init() {
 
 add_action( 'admin_init', 'grev3atc_settings_init' );
 
-function grev3atc_secretkey_field_callback($args) {
+function grev3atc_simple_text_field_callback($args) {
 
 	$options = get_option('grev3atc_keys');
 
 	?>
 	<input class="<?php echo esc_attr( $args['class'] ); ?>" id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
     <p class="description">
-		<?php esc_html_e( 'Enter your secretKey', 'grev3atc' ); ?>
-	</p>
-    <?php
-}
-
-
-function grev3atc_sitekey_field_callback($args) {
-
-	$options = get_option('grev3atc_keys');
-
-	?>
-	<input class="<?php echo esc_attr( $args['class'] ); ?>" id="<?php echo esc_attr( $args['label_for'] ); ?>" type="text" name="grev3atc_keys[<?php echo esc_attr( $args['label_for'] ); ?>]" value="<?php echo isset( $options[ $args['label_for'] ] ) ? esc_attr(  $options[ $args['label_for'] ]  ) : ''; ?>">
-    <p class="description">
-		<?php esc_html_e( 'Enter your siteKey', 'grev3atc' ); ?>
+		<?php echo esc_html( $args['description'] ); ?>
 	</p>
     <?php
 }
@@ -75,7 +64,7 @@ function grev3atc_section_callback( $args ) {
 
 function grev3atc_options_page() {
 	add_menu_page(
-		'Woocommerce Google recaptcha v3 on Add to cart Options',
+		__('Woocommerce Google recaptcha v3 on Add to cart settings'),
 		'WC-grev3-atc',
 		'manage_options',
 		'grev3atc',
