@@ -57,6 +57,10 @@ add_action( 'wp_enqueue_scripts', 'woocommerce_add_to_cart_recaptcha_load_script
 
 function woocommerce_add_to_cart_recaptcha_validation( $passed, $product_id, $quantity ) {
 
+	if ( isset( WC()->session ) && WC()->session->get( 'captcha_validated' ) === true ) {
+        return $passed;
+    }
+
 	$GOOGLE_RECAPTCHA_SITE_KEY  = get_option('grev3atc_keys')['grev3atc_sitekey'];
 	$GOOGLE_RECAPTCHA_SECRET_KEY  = get_option('grev3atc_keys')['grev3atc_secretkey'];
 	
@@ -83,6 +87,7 @@ function woocommerce_add_to_cart_recaptcha_validation( $passed, $product_id, $qu
 			
 			$curlResponseArray = json_decode($response, true);
 			if ($curlResponseArray["success"] == true && !empty($curlResponseArray["action"]) && $curlResponseArray["score"] >= 0.5) {
+					WC()->session->set( 'captcha_validated', true );	
 					return $passed;
 				} else {
 					$passed = false;
@@ -96,10 +101,11 @@ function woocommerce_add_to_cart_recaptcha_validation( $passed, $product_id, $qu
 
 add_filter( 'woocommerce_add_to_cart_validation', 'woocommerce_add_to_cart_recaptcha_validation', 9, 3 );
 
-//TO DO LIST:
+function reset_captcha_after_cart_update() {
+		if ( isset( WC()->session ) ) {
+				WC()->session->set( 'captcha_validated', false );
+			}
+	}
+add_action( 'woocommerce_before_calculate_totals', 'reset_captcha_after_cart_update' );
 
-/*
-sprawdz kompatibilnosc z wp_ghostem
-wersje jezykowe
-*/
 ?>
