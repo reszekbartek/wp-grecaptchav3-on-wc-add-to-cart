@@ -30,9 +30,9 @@ function woocommerce_add_to_cart_recaptcha_load_scripts(){
 			
 			wp_enqueue_script( 'recaptchav3', 'https://www.google.com/recaptcha/api.js?render='.$GOOGLE_RECAPTCHA_SITE_KEY);
 
-			wp_register_script( 'wp-grecaptchav3-on-wc-add-to-cart', plugin_dir_url( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart.js', array('jquery','recaptchav3'), filemtime( plugin_dir_url( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart.js'), false  );
+			wp_register_script( 'wp-grecaptchav3-on-wc-add-to-cart', plugin_dir_url( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart.js', array('jquery','recaptchav3'), filemtime( plugin_dir_path( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart.js'), false  );
 			
-			wp_register_script( 'wp-grecaptchav3-on-wc-add-to-cart-on-cart-page', plugin_dir_url( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart-on-cart-page.js', array('jquery','recaptchav3'), filemtime( plugin_dir_url( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart-on-cart-page.js'), false  );
+			wp_register_script( 'wp-grecaptchav3-on-wc-add-to-cart-on-cart-page', plugin_dir_url( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart-on-cart-page.js', array('jquery','recaptchav3'), filemtime( plugin_dir_path( __FILE__ ) . 'wp-grecaptchav3-on-wc-add-to-cart-on-cart-page.js'), false  );
 			
 		}
 		
